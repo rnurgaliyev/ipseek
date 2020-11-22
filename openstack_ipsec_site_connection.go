@@ -97,6 +97,10 @@ func updateOpenstackIpsecSiteConnection(c map[string]string, address string) boo
 	getRequest.Header.Set("X-Auth-Token", token)
 
 	getResponse, err := client.Do(getRequest)
+	if err != nil {
+		log.Printf("[ERROR] openstack_ipsec_site_connection: Unable commit GET request to network endpoint (%v)\n", err)
+		return false
+	}
 
 	b, err := ioutil.ReadAll(getResponse.Body)
 	if err != nil {
