@@ -6,5 +6,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 \
 
 FROM arm32v7/alpine:latest
 COPY --from=0 /ipseek /bin
-EXPOSE 2112
+EXPOSE 8088
 CMD ["/bin/ipseek", "-c", "/etc/ipseek.yml"]
