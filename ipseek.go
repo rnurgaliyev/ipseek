@@ -34,7 +34,7 @@ func updateObject(o updateObjectData, group string, address string) {
 	case "openstack_ipsec_site_connection":
 		for i := 0; i < maxAttempts; i++ {
 			if updateOpenstackIpsecSiteConnection(o.Configuration, address) {
-				log.Printf("[INFO] Successfully updated object object %s@%s\n", o.Name, group)
+				log.Printf("[INFO] Successfully updated object %s@%s\n", o.Name, group)
 				break
 			} else {
 				log.Printf("[WARNING] Failed to update object %s@%s (attempt %d)\n", o.Name, group, i+1)
