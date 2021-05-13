@@ -1,7 +1,7 @@
 # ipseek
 
 This small server provides DDNS-like functionality to OpenStack VPNaaS IPsec
-site connections. You would find this useful if you want to build and IPsec
+site connections. You would find this useful if you want to build an IPsec
 Site-2-Site connection with a router, that does not have a static IP address.
 
 IPsec peer ID and IP address are updated with the IP address, that is provided
